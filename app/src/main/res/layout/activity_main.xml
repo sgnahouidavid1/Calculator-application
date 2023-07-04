@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+    <!-- Create the Interface of the Calculator (place where the numbers will be shown)-->
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/bgColorDarkGray"
+        android:padding="10dp"
+        android:textSize="42sp"
+        android:gravity="end|bottom"
+    />
+    <!-- here we are using gravity and pipping to move the text to the bottom-right/end of
+    the calculator interface ( | is the symbol for pipping so in this line the text is move
+    to the right/end then by use pipping the text move to the bottom -->
+    <!-- Calculator Number Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+    >
+        <!-- set the layout_weight to 1 so the button can take all the height space needed. -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnSeven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="7"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <!-- onClick method allow something to be done when the button a click.
+        don't use this method on larger project, your more likely to run to problems in a larger project -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnEight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="8"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnNine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="9"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+
+        <Button
+            android:id="@+id/btnDivision"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btnColorDimGray"
+            android:onClick="onOperator"
+            android:text="/"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <!-- set the layout_weight to 1 so the button can take all the height space needed. -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnFour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="4"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <!-- onClick method allow something to be done when the button a click.
+        don't use this method on larger project, your more likely to run to problems in a larger project -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnFive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="5"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnSix"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="6"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="*"
+            android:onClick="onOperator"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="1"
+    >
+    <!-- set the layout_weight to 1 so the button can take all the height space needed. -->
+    <Button
+        android:layout_margin="2dp"
+        android:id="@+id/btnOne"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="1"
+        android:onClick="onDigit"
+        android:textSize="25sp"
+        android:backgroundTint="@color/btnColorDimGray"
+        />
+    <!-- onClick method allow something to be done when the button a click.
+    don't use this method on larger project, your more likely to run to problems in a larger project -->
+    <Button
+        android:layout_margin="2dp"
+        android:id="@+id/btntwo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="2"
+        android:onClick="onDigit"
+        android:textSize="25sp"
+        android:backgroundTint="@color/btnColorDimGray"
+        />
+    <Button
+        android:layout_margin="2dp"
+        android:id="@+id/btnThree"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="3"
+        android:onClick="onDigit"
+        android:textSize="25sp"
+        android:backgroundTint="@color/btnColorDimGray"
+        />
+    <Button
+        android:layout_margin="2dp"
+        android:id="@+id/btnDSubtract"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="-"
+        android:onClick="onOperator"
+        android:textSize="25sp"
+        android:backgroundTint="@color/btnColorDimGray"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dot"
+            android:onClick="onDecimalPoint"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <!-- set the layout_weight to 1 so the button can take all the height space needed. -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnZero"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/_0"
+            android:onClick="onDigit"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <!-- onClick method allow something to be done when the button a click.
+        don't use this method on larger project, your more likely to run to problems in a larger project -->
+        <!--For the Zero button we want it to be twice as large as the other buttons so to do the layout_weight must equal 2 -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="CLR"
+            android:onClick="onClear"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnAddition"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            android:onClick="onOperator"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <!-- set the layout_weight to 1 so the button can take all the height space needed. -->
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnEqual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="="
+            android:onClick="onEqual"
+            android:textSize="25sp"
+            android:backgroundTint="@color/btnColorDimGray"
+            />
+        <!--For the Equal button we want it to be three times larger as the other buttons so to do the layout_weight must equal 3 -->
+
+    </LinearLayout>
+</LinearLayout>

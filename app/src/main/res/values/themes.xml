@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SimpleCalculatorApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- To stop showing the top bar with the application name change parent= to, parent="Theme.AppCompat.Light.NoActionBar" -->
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/btnColorDimGray</item>
+    </style>
+
+    <style name="Theme.SimpleCalculatorApp" parent="Base.Theme.SimpleCalculatorApp" />
+</resources>
