@@ -1,2 +1,2 @@
 # Calculator-application
-This is a simple code for a android stuido calculator appication. I build this calcualtor to help me understand android  development more 
+This is a simple code for a android studio calculator application. I build this calculator to help me understand android  development more 
